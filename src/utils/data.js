@@ -10,9 +10,9 @@ const data=[
         "cuisines": [
           "Pizzas"
         ],
-        "avgRating": 4.2,
+        "avgRating": 3.7,
         "parentId": "721",
-        "avgRatingString": "4.2",
+        "avgRatingString": "3.7",
         "totalRatingsString": "10K+",
         "sla": {
           "deliveryTime": 32,
@@ -107,9 +107,9 @@ const data=[
           "Tibetan",
           "Desserts"
         ],
-        "avgRating": 4.1,
+        "avgRating": 3.6,
         "parentId": "61955",
-        "avgRatingString": "4.1",
+        "avgRatingString": "3.6",
         "totalRatingsString": "1.1K+",
         "sla": {
           "deliveryTime": 28,
@@ -203,9 +203,9 @@ const data=[
           "Rolls & Wraps",
           "Fast Food"
         ],
-        "avgRating": 4.2,
+        "avgRating": 2.5,
         "parentId": "547",
-        "avgRatingString": "4.2",
+        "avgRatingString": "2.5",
         "totalRatingsString": "31K+",
         "sla": {
           "deliveryTime": 16,
@@ -1157,4 +1157,5 @@ const data=[
         "type": "WEBLINK"
       }
     }]
+export const CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
     export default data;
