@@ -34,7 +34,12 @@ ul>li{
 }
 .logo{
     padding-top: 20px;
-    width:80px;
+    width:50px;
+}
+.top-bar{
+    display: flex ;
+    align-items: center;
+    justify-content: space-around;
 }
 .res-cards{
     display: flex;

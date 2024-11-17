@@ -2,8 +2,8 @@ const Header=()=>{
     return(
         <div className="nav-cont">
             <div className="nav-bar">
-                <div>
-                    <img src="https://w7.pngwing.com/pngs/664/210/png-transparent-uber-eats-muncheez-delivery-online-food-ordering-food-delivery-food-logo-uber-eats.png" className="logo"/>
+                <div className="logo-cont">
+                    <img src="https://i.ibb.co/CPSv6d8/order-food.png" className="logo"/>
                 </div>
                 <div className="">
                     <ul className="nav-items">
