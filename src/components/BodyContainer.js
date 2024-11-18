@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ResCards from "./ResCards";
 import Shimmer from "./Shimmer";
+import { SWIGGY_API } from "../utils/data";
+import { Link } from "react-router-dom";
 
 const BodyContainer=()=>{
     const [list,updateList]=useState([])
@@ -12,7 +14,7 @@ const BodyContainer=()=>{
     },[])
 
     const getData=async()=>{
-        const res=await fetch("https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const res=await fetch(SWIGGY_API)
         const jsonRes=await res.json()
         updateList(jsonRes?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setNewList(jsonRes?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -40,7 +42,7 @@ const BodyContainer=()=>{
                 }>Click to Filter</button>
             </div>
             {(list.length===0)?<Shimmer/>:<div className="res-cards">
-                {newList.map(restraunt=><ResCards resDetails={restraunt} key={restraunt.info.id}/>)}
+                {newList.map(restraunt=><Link to={"restaurant/"+restraunt.info.id} key={restraunt.info.id}><ResCards resDetails={restraunt}/></Link>)}
             </div>}
         </div>
     )
