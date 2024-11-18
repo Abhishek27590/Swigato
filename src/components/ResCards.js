@@ -12,7 +12,7 @@ const ResCards=({resDetails})=>{
                 <p>{costForTwo.toUpperCase()}</p>
                 <p>{avgRatingString}⭐</p>
                 <p>{sla.deliveryTime} Mins</p>
-                <p>{cuisines.join(",")}</p>
+                <p className="cuisines">{cuisines.join(",")}</p>
             </div>
         </div>
     )

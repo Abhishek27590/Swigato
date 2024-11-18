@@ -12,7 +12,7 @@ const BodyContainer=()=>{
     },[])
 
     const getData=async()=>{
-        const res=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const res=await fetch("https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const jsonRes=await res.json()
         updateList(jsonRes?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setNewList(jsonRes?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)

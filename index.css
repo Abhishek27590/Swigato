@@ -41,6 +41,11 @@ ul>li{
     align-items: center;
     justify-content: space-around;
 }
+.cuisines{
+    text-wrap:wrap;
+    width:100%;
+    overflow: hidden;
+}
 .res-cards{
     display: flex;
     flex-wrap: wrap;
