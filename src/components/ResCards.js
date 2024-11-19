@@ -8,11 +8,11 @@ const ResCards=({resDetails})=>{
                 <img src={CDN_URL+cloudinaryImageId}/>
             </div>
             <div>
-                <p>{name}</p>
-                <p>{costForTwo.toUpperCase()}</p>
-                <p>{avgRatingString}⭐</p>
-                <p>{sla.deliveryTime} Mins</p>
-                <p className="cuisines">{cuisines.join(",")}</p>
+                <p className="link-remove">{name}</p>
+                <p className="link-remove">{costForTwo.toUpperCase()}</p>
+                <p className="link-remove">{avgRatingString}⭐</p>
+                <p className="link-remove">{sla.deliveryTime} Mins</p>
+                <p className="cuisines link-remove">{cuisines.join(",")}</p>
             </div>
         </div>
     )

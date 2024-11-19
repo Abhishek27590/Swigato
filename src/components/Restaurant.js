@@ -3,6 +3,7 @@ import { MENU_URL } from '../utils/data'
 import Shimmer from './Shimmer'
 import Item from './Item'
 import { useParams } from 'react-router-dom'
+import Category from './Category'
 
 const Restaurant = () => {
     const [menuData,setMenuData]=useState(null)
@@ -16,34 +17,38 @@ const Restaurant = () => {
         setMenuData(conRes?.data)
     }
     console.log(MENU_URL+`&restaurantId=${resId}`+"&catalog_qa=undefined&submitAction=ENTER")
-    let itemCards=[]
-    if(menuData===null&&itemCards.length===0){
+    let itemCard=[]
+    if(menuData===null&&itemCard.length===0){
         return<Shimmer/>
     }
     
     const {name,costForTwoMessage,avgRating}=menuData?.cards[2]?.card?.card?.info
     const itemsCar=menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    // console.log(itemsCar)
+    
     
     
         itemsCar.map((i) => {
-            if(i?.card?.card.hasOwnProperty('itemCards')) itemCards=i?.card?.card?.itemCards
+            if(i?.card?.card.hasOwnProperty('itemCards')) itemCard.push(i?.card?.card)
         })
-    console.log(itemCards)
+    console.log(itemCard)
+    
 
     
 
   return (
-    <div>
-        <div>
-            <h1>{name}-</h1>
-            <h1>{avgRating}⭐</h1>
-            <h2>{costForTwoMessage}</h2>
-        </div>
-        <div>
-            <h1>Curated items for you !!!</h1>
-            <div>
-                {itemCards.map((item)=><Item item={item} key={item.card.info.id}/>)}
+    <div className="restaurant-menu-wrapper">
+        <div className='restaurant-menu'>
+            <div className='restaurant-name'>
+                <div>
+                    <h1>{name}-</h1>
+                    <h1>{avgRating}⭐</h1>
+                </div>
+                <h2>{costForTwoMessage}</h2>
+            </div>
+            <div className='restaurant-categories'>
+                
+                    {itemCard.map((category)=><Category category={category} key={category.title}/>)}
+                
             </div>
         </div>
     </div>

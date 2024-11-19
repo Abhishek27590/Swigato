@@ -1,6 +1,10 @@
 *{
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 .app{
     height: 100vh;
@@ -61,7 +65,11 @@ ul>li{
     justify-content: center;
     align-items: center;
     width: 100%;
-
+    text-decoration: none;
+}
+.link-remove{
+    text-decoration: none;
+    color: black;
 }
 .res-card{
     width:250px;
@@ -73,6 +81,7 @@ ul>li{
     flex-direction: column;
     height:450px;
     justify-content: space-between;
+    text-decoration: none;
 }
 .res-card:hover{
     box-shadow: 0 5px 10px rgb(0 0 0 / 0.4);
@@ -92,6 +101,8 @@ ul>li{
 .filter-btn{
     padding:10px;
     margin: 10px 20px;
+    border-radius: 20px;
+    border:none;
 }
 .shimmer-card{
     width:250px;
@@ -117,4 +128,58 @@ ul>li{
     border-radius: 20px;
     height:40%;
     background-color: rgb(183, 171, 156);
+}
+.restaurant-menu-wrapper{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.restaurant-menu{
+    width:60%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.restaurant-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.restaurant-name>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.restaurant-categories{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+.restaurant-items{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap:30px;
+}
+.restaurant-items>h1{
+    text-align: center;
+    width: 100%;
+    border:1px solid rgba(0, 0, 0, 0.42);
+    border-radius: 20px; 
+    color: midnightblue;
+    font-size: xx-large;
+    -webkit-box-shadow: 10px 10px 40px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 40px -20px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 40px -20px rgba(0,0,0,0.75);
+}
+.search-bar{
+    width:300px;
+    height:40px;
+    border-radius: 20px;
+    border:none;
+    background-color: antiquewhite;
+    font-size: large
 }

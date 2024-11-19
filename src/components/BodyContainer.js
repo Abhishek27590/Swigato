@@ -26,9 +26,9 @@ const BodyContainer=()=>{
         <div>
             <div className="top-bar">
                 <div>
-                    <input className="search-bar" type="text" placeholder="Kya khaoge aaj?"
+                    <input className="search-bar" type="text" placeholder="  Kya khaoge aaj?"
                     value={searchText} onChange={(e)=>{setSearchText(e.target.value)}}></input>
-                    <button onClick={()=>{
+                    <button className="filter-btn" onClick={()=>{
                         const newSearchList=list.filter((lis)=>lis.info.name.toLowerCase().includes(searchText.toLowerCase()))
                         setNewList(newSearchList)
                     }}>Search</button>
@@ -42,7 +42,8 @@ const BodyContainer=()=>{
                 }>Click to Filter</button>
             </div>
             {(list.length===0)?<Shimmer/>:<div className="res-cards">
-                {newList.map(restraunt=><Link to={"restaurant/"+restraunt.info.id} key={restraunt.info.id}><ResCards resDetails={restraunt}/></Link>)}
+                {newList.map(restraunt=><Link to={"restaurant/"+restraunt.info.id} key={restraunt.info.id}>
+                <ResCards resDetails={restraunt}/></Link>)}
             </div>}
         </div>
     )
