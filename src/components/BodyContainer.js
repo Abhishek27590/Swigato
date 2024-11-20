@@ -37,7 +37,7 @@ const BodyContainer=()=>{
                 {
                     const filterlist=list.filter((temp)=>temp.info.avgRating>4.3)
                     console.log(filterlist)
-                    updateList(filterlist)
+                    setNewList(filterlist)
                 }
                 }>Click to Filter</button>
             </div>

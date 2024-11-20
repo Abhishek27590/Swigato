@@ -103,6 +103,7 @@ ul>li{
     margin: 10px 20px;
     border-radius: 20px;
     border:none;
+    cursor: pointer;
 }
 .shimmer-card{
     width:250px;
@@ -181,5 +182,6 @@ ul>li{
     border-radius: 20px;
     border:none;
     background-color: antiquewhite;
-    font-size: large
+    font-size: large;
+    cursor: pointer;
 }
